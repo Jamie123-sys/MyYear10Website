@@ -79,6 +79,50 @@ img {
 }
 
 
+/* The game section: the game on top, info card underneath */
+.game-section{
+    width: 70%;
+    margin: 3em auto;
+}
+
+/* keeps the game the same shape as the real game (16:9) at any width */
+.game-frame{
+    aspect-ratio: 16 / 9;
+    margin-bottom: 2em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-frame iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.game-info{
+    text-align: center;
+}
+
+.game-info p{
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.play-button{
+    display: inline-block;
+    margin: 1em 0 0.5em;
+    padding: 0.7em 1.6em;
+    background-color: white;
+    color: rgb(71, 71, 71);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.3em;
+}
+
+.play-button:hover{
+    background-color: rgb(220, 220, 220);
+}
+
 /* Styling for a footer section to take a bit of spcae at the bottom of the page */
 .footer{
     background-color: rgb(71, 71, 71);
@@ -100,6 +144,10 @@ img {
     .topic-content {
         grid-template-columns: 1fr;
         gap: 2em;
+        width: 85%;
+    }
+
+    .game-section {
         width: 85%;
     }
 }
