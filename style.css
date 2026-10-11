@@ -12,6 +12,14 @@ html {
 /* reset for images to ensure they ar 100% of the parent container width */
 img {
     width: 100%;
+    display: block;
+}
+
+/* make every card image the same square shape so the cards line up */
+.topic-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0.3em;
 }
 
 /* The hero section styling- use your OWN Hero Image URL here */
@@ -77,4 +85,21 @@ img {
     color: white;
     text-align: right;
     padding: 3em 3em;
+}
+
+/* on phones and small screens: one column, smaller text */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 2.5em;
+    }
+
+    .topic-title {
+        padding: 0.1em 1em;
+    }
+
+    .topic-content {
+        grid-template-columns: 1fr;
+        gap: 2em;
+        width: 85%;
+    }
 }
