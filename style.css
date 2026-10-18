@@ -92,6 +92,23 @@ img {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* the big button that sits where the game will be */
+.start-game{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.start-game:hover{
+    background-color: rgb(235, 235, 235);
+}
+
 .game-frame iframe{
     width: 100%;
     height: 100%;

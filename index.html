@@ -30,12 +30,8 @@
                 <h2 class="topic-card-text">Gru in the forest</h2>
             </div>
             <div class="topic-card">
-                <img src="images/forest-original.jpg" alt="The original forest path photo before editing">
-                <h2 class="topic-card-text">Before: the original photo</h2>
-            </div>
-            <div class="topic-card">
-                <img src="images/gru-closeup.jpg" alt="Close-up of Gru cut out and placed on the forest path">
-                <h2 class="topic-card-text">Close-up of the cut-out</h2>
+                <img src="images/snowflake.jpg" alt="3D render of a white snowflake">
+                <h2 class="topic-card-text">Snowflake</h2>
             </div>
         </div>
     </section>
@@ -84,11 +80,11 @@
                 <p>A platformer I made where everything looks like it's cut out of black paper. Get to the door at the end of the level.</p>
                 <p><b>Controls:</b> left and right arrows to move, space to jump. Press space again in the air to double jump.</p>
                 <p>Grab the shiny glints for 100 points each. If you hit spikes or fall off you lose 50 and go back to the last flag you touched. The faster you get to the door the more bonus points you get. Press R at the end to play again.</p>
-                <p>Click on the game first or the keys won't work.</p>
             </div>
-            <!-- the game plays right here on the page -->
+            <!-- the game plays right here on the page. It only loads when you click,
+                 otherwise it grabs the keyboard and jumps the page down to itself -->
             <div class="game-frame">
-                <iframe src="paper-cut/index.html" title="Paper Cut game" allowfullscreen></iframe>
+                <button class="start-game" type="button">Click to play</button>
             </div>
             <div class="game-info">
                 <a class="play-button" href="paper-cut/index.html" target="_blank">Play full screen</a>
@@ -101,6 +97,18 @@
     <footer class="footer">
         <p>&copy; 2026 Jamie's website, made by Jamie</p>
     </footer>
+
+    <script>
+        // swap the button for the game when it's clicked
+        document.querySelector('.start-game').addEventListener('click', function () {
+            var game = document.createElement('iframe');
+            game.src = 'paper-cut/index.html';
+            game.title = 'Paper Cut game';
+            game.allowFullscreen = true;
+            this.replaceWith(game);
+            game.focus();
+        });
+    </script>
 
 <!-- The end of the whole page- no more content after this! -->
 </body>
