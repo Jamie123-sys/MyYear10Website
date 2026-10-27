@@ -174,3 +174,30 @@ img {
         width: 85%;
     }
 }
+/* reflection under each section, same plain style as the how to play text */
+.reflection{
+    width: 70%;
+    margin: 0 auto 3em;
+    line-height: 1.5;
+    font-size: 1.1em;
+}
+
+.reflection h2{
+    font-size: 1.6em;
+    margin: 0 0 0.3em;
+}
+
+.reflection h3{
+    font-size: 1em;
+    margin: 1em 0 0;
+}
+
+.reflection p{
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .reflection {
+        width: 85%;
+    }
+}
